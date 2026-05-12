@@ -29,6 +29,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Point Web App to the new image
+        if: false
         run: |
           az webapp config container set \
             --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
