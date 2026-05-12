@@ -24,8 +24,8 @@ jobs:
 
       - name: Build and push container image
         run: |
-          docker build -f Wpm.Management.Api/Dockerfile -t ${{ secrets.ACR_LOGIN_SERVER }}/wpm-management-api:${ env.DATE_TIME }.${{ github.run_number }} .
-          docker push ${{ secrets.ACR_LOGIN_SERVER }}/wpm-management-api:${ env.DATE_TIME }.${{ github.run_number }}
+          docker build -f Wpm.Management.Api/Dockerfile -t ${{ secrets.ACR_LOGIN_SERVER }}/wpm-management-api:${ env.DATE }.${{ github.run_number }} .
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/wpm-management-api:${ env.DATE }.${{ github.run_number }}
 
       - name: Azure login
         uses: azure/login@v2
